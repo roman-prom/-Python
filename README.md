@@ -9,27 +9,31 @@
 
 Для того чтобы удалить сотрудника с базы данных, вам нужно выбрать сотрудника нажав на его строку, далее нажать на данный значок: 
 
-![delete](https://github.com/roman-prom/-Python/assets/124841859/1e51ba58-9314-47c9-874d-43fedd05298e)
+![delete](https://github.com/roman-prom/-Python/assets/124841859/9b941d34-9ecd-4415-b0e9-0c2328659179)
+
 
 после нажатия выбранныый вами сотрудник удалиться
 
 Для обновления списка сотрудников нужно нажать на данный значок: 
 
-![refresh](https://github.com/roman-prom/-Python/assets/124841859/767cc49e-d876-455f-b741-12f0c295dc5a)
+![refresh](https://github.com/roman-prom/-Python/assets/124841859/bd6d5851-4565-4c28-bb0b-e5aacf2ae564)
+
 
 после нажатия список обновиться 
 
 
 Для редактирования сотрудника вам нужно выбрать сотрудника и нажать на данный значок: 
 
-![update](https://github.com/roman-prom/-Python/assets/124841859/cae57424-bf94-4455-984b-0e60313a0a63)
+![update](https://github.com/roman-prom/-Python/assets/124841859/9627a96a-ad64-4f21-bbee-8cb5fd2f879c)
+
 
 после нажатия откроется окно в котором вы сможете отредактировать сотрудника
 
 
 Для поиска сотрудника вам нужно нажать на данный значок:
 
-![search](https://github.com/roman-prom/-Python/assets/124841859/c07a4a9a-50bd-48ef-b7c1-c2e78402ce69)
+![search](https://github.com/roman-prom/-Python/assets/124841859/e8118c0e-5b3c-4177-a006-f55388a5a356)
+
 
 И ввести ФИО во всплывшем окне, после этого список обновиться останеться только тот чьё имя вы указали
 
