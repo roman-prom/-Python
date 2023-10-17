@@ -83,7 +83,7 @@ class Main(tk.Frame):
     def edit_record(self, name, tel, email, salary):
         ind = self.tree.set(self.tree.selection()[0], '#1')
         self.db.cur.execute('''
-            UPDATE сотрудники SET name = ?, phone = ?, email = ?, email = ?
+            UPDATE сотрудники SET name = ?, phone = ?, email = ?, salary = ?
             WHERE id = ?
         ''', (name, tel, email, salary, ind))
         self.db.conn.commit()
@@ -124,7 +124,7 @@ class Main(tk.Frame):
     
     def view_records(self):
         [self.tree.delete(i) for i in self.tree.get_children()]
-        self.db.cur.execute("SELECT * FROM сотрудники ORDER BY RANDOM() LIMIT 3")
+        self.db.cur.execute("SELECT * FROM сотрудники ORDER BY RANDOM() LIMIT 4")
         [self.tree.insert('', 'end', values=i) for i in self.db.cur.fetchall()]
   
 # класс дочернего окна
@@ -198,7 +198,7 @@ class Update(Child):
                         self.entry_salary.get()
                         ))
         self.btn_ok.bind('<Button-1>', lambda ev: self.destroy(), add='+')
-        self.btn_ok.place(x=195, y=160)
+        self.btn_ok.place(x=195, y=130)
 
     # метод автозаполнения формы старыми данными
     def load_data(self): 
@@ -208,7 +208,7 @@ class Update(Child):
         self.entry_name.insert(0, row[1])
         self.entry_tel.insert(0, row[2])
         self.entry_email.insert(0, row[3])
-        self.entry_salary.insert(0, row[3])
+        self.entry_salary.insert(0, row[4])
 
 # класс окна поиска
 class Search(tk.Toplevel):
@@ -234,11 +234,12 @@ class Search(tk.Toplevel):
         self.entry_name = tk.Entry(self)
         self.entry_name.place(x=45, y=20)
         
-        self.btn_ok = tk.Button(self, text='Найти')
+        self.btn_ok = tk.Button(self, text='Найти' )
         self.btn_ok.bind('<Button-1>', 
                          lambda ev: self.view.search_records(self.entry_name.get()))
         self.btn_ok.bind('<Button-1>',
                          lambda ev: self.deiconify(), add='+')
+        self.btn_ok.bind('<Button-1>', lambda ev: self.destroy(), add='+')
         self.btn_ok.place(x=175, y=15)
         
         btn_cancel = tk.Button(self, text='Закрыть',
